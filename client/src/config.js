@@ -1,1 +1,2 @@
-export const SERVER_BASE = process.env.REACT_APP_SERVER_BASE || "http://localhost:4000";
+const API_BASE = "https://spinnergy-backend.onrender.com";
+export default API_BASE;
