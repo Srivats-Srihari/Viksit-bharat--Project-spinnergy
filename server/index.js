@@ -13,7 +13,7 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const helmet = require('helmet');
-
+import { API_BASE } from "./config";
 const app = express();
 app.use(helmet());
 app.use(cors());
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 // Proxy endpoint: POST /api/nutrition { query: "2 idli" }
-app.post('/api/nutrition', async (req, res) => {
+app.post('${API_BASE}/nutrition', async (req, res) => {
   const Q = req.body && req.body.query;
   if (!Q) return res.status(400).json({ error: 'query required' });
 
@@ -55,7 +55,7 @@ app.post('/api/nutrition', async (req, res) => {
 });
 
 // Simulate endpoint: returns random energy increments (for judges)
-app.get('/api/simulate', (req, res) => {
+app.get('${API_BASE}/simulate', (req, res) => {
   // generate a random energy reading (Joules)
   const value = Number((Math.random() * 2 + 0.2).toFixed(2)); // 0.2 - 2.2 J
   res.json({ energy: value, ts: Date.now() });
