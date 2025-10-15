@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SERVER_BASE } from "../config";
+import {SERVER_BASE} from "../config";
 
 export default function MealLogger({ meals, setMeals }){
   const [q, setQ] = useState('');
