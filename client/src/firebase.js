@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: "spinnergy-13b7e",
   storageBucket: "spinnergy-13b7e.appspot.com",
   messagingSenderId: "597220616891",
-  appId: "1:597220616891:web:0000000000000000000000"
+  appId: "1:597220616891:web:02227fa9a3aa28d7c7979e"
 };
 
 const app = initializeApp(firebaseConfig);
