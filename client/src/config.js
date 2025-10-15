@@ -1,2 +1,2 @@
-const API_BASE = "https://spinnergy-backend.onrender.com";
+const API_BASE = "https://viksit-bharat-project-spinnergy.onrender.com/";
 export default API_BASE;
