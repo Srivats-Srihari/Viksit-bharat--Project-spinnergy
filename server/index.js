@@ -13,7 +13,7 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const helmet = require('helmet');
-import { SERVER_BASE } from "../client/src/config.js";
+import default { SERVER_BASE } from "../client/src/config";
 const app = express();
 app.use(helmet());
 app.use(cors());
